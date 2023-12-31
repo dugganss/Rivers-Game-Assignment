@@ -9,13 +9,18 @@
 class Game {
 	Rivers r;
 	//further variables...
+	int score = 0;
+	int total = 0;
 
 public:
 	Game(Rivers& rivers) : r(rivers) { }
-	int getScore() { return 0; }
-	int getTotal() { return 0; }
+	int getScore() { return score; }
+	int getTotal() { return total; }
 	//reset score and total to 0
-	void reset() { }
+	void reset() {
+		score = 0;
+		total = 0;
+	}
 
 	//this method should implement one round of the game only, 
 	//it should return true if the player wishes to continue ('s' or 'd') and false otherwise ('q')
